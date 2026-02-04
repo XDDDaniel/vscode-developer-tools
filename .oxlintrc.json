@@ -1,0 +1,44 @@
+{
+  "categories": {
+    "correctness": "warn",
+    "suspicious": "warn",
+    "perf": "off",
+    "restriction": "warn",
+    "style": "warn",
+    "nursery": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "out",
+    "esbuild.js",
+    ".vscode-test.mjs"
+  ],
+  "rules": {
+    "camelcase": "off",
+    "noUnusedVariables": "warn",
+    "noEmptyBlockStatements": "warn",
+    "prefer-arrow-callback": "error",
+    "typescript/no-explicit-any": "error",
+    "no-magic-numbers": "off",
+    "no-ternary": "off",
+    "max-statements": "off",
+    "typescript/explicit-module-boundary-types": "off",
+    "typescript/explicit-function-return-type": "off",
+    "no-undefined": "off",
+    "init-declarations": "off",
+    "oxc/no-optional-chaining": "off",
+    "oxc/no-async-await": "off",
+    "oxc/no-rest-spread-properties": "off",
+    "no-console": "off",
+    "new-cap": "off",
+    "id-length": "off",
+    "unicorn/require-post-message-target-origin": "off",
+    "sort-imports": "off",
+    "unicorn/filename-case": "off",
+    "max-params": "off",
+    "no-unused-vars": "error",
+    "unicorn/consistent-function-scoping": "off",
+    "typescript/consistent-indexed-object-style": "error"
+  }
+}

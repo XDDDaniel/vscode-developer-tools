@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src {{cspSource}}; style-src {{cspSource}};"
+    />
+    <link rel="stylesheet" href="{{styleUri}}" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="error-notification" class="error-notification hidden">
+        <span class="error-message"></span>
+        <button class="error-close-btn" title="Close error">×</button>
+      </div>
+      <div id="success-notification" class="success-notification hidden">
+        <span class="success-message"></span>
+        <button class="success-close-btn" title="Close success">×</button>
+      </div>
+      <label for="toolSelect">Select Tool</label>
+      <select id="toolSelect">
+        <optgroup label="Encoding">
+          <option value="base64">Base64</option>
+          <option value="base32">Base32</option>
+          <option value="url">URL</option>
+          <option value="jwt">JWT</option>
+        </optgroup>
+        <optgroup label="Generators">
+          <option value="uuid:generate">UUID Generator</option>
+          <option value="ulid:generate">ULID Generator</option>
+          <option value="nanoid:generate">NanoID Generator</option>
+          <option value="password:generate">Password Generator</option>
+          <option value="lorem:generate">Lorem Ipsum</option>
+          <option value="qrcode:generate">QR Code Generator</option>
+          <option value="barcode:generate">Barcode Generator</option>
+        </optgroup>
+        <optgroup label="Hash">
+          <option value="hash:generator">Hash Generator</option>
+        </optgroup>
+        <optgroup label="Text">
+          <option value="text:case">Case Transform</option>
+          <option value="text:sort">Text Sort</option>
+          <option value="text:filter">Text Filter</option>
+          <option value="text:escape">Text Escape</option>
+        </optgroup>
+        <optgroup label="JSON">
+          <option value="json:jsonpath">JSON Path</option>
+          <option value="json:schema">JSON Schema</option>
+        </optgroup>
+        <optgroup label="DateTime">
+          <option value="datetime:converter">Timestamp Converter</option>
+        </optgroup>
+        <optgroup label="Units">
+          <option value="units:convert">Unit Converter</option>
+        </optgroup>
+        <optgroup label="Format">
+          <option value="format:code">Code Formatter</option>
+          <option value="format:data">Data Formatter</option>
+          <option value="format:sql">SQL Formatter</option>
+          <option value="text:format">Format Converter</option>
+        </optgroup>
+        <optgroup label="Advanced">
+          <option value="regex:test">Regex Tester</option>
+          <option value="color:picker">Color Picker</option>
+          <option value="certificate:analyze">Certificate Analyzer</option>
+        </optgroup>
+      </select>
+
+      <label id="input-label" for="input">Input</label>
+      <textarea id="input" placeholder="Enter text..."></textarea>
+
+      <div class="btn-group">
+        <button id="execute">▶ Execute</button>
+        <button id="clear" class="secondary">Clear</button>
+      </div>
+
+      <div class="output-section">
+        <div class="output-header">
+          <label for="output">Output</label>
+        </div>
+        <div id="output" class="output empty">Result will appear here...</div>
+        <button id="copy" class="copy-btn secondary">Copy</button>
+      </div>
+    </div>
+
+    <script src="{{scriptUri}}"></script>
+  </body>
+</html>

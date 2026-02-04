@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/knip@latest/schema.json",
+  "entry": [
+    "src/extension.ts",
+    "src/webview/sidebar.js",
+    "src/test/**/*.test.ts"
+  ],
+  "project": [
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+  "ignore": [
+    "dist/**",
+    "out/**",
+    "node_modules/**"
+  ],
+  "ignoreDependencies": [
+    "@vscode/test-electron",
+    "@types/mocha"
+  ],
+  "ignoreBinaries": [
+    "mocha",
+    "report"
+  ]
+}

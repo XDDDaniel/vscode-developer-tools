@@ -1,0 +1,301 @@
+body {
+  font-family: var(--vscode-font-family);
+  padding: 10px;
+  color: var(--vscode-foreground);
+  background: var(--vscode-editor-background);
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.error-notification {
+  background: var(--vscode-inputValidation-errorBackground);
+  color: var(--vscode-errorForeground);
+  border: 1px solid var(--vscode-inputValidation-errorBorder);
+  border-left: 4px solid var(--vscode-errorForeground);
+  border-radius: 3px;
+  padding: 12px;
+  font-size: var(--vscode-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.error-message {
+  flex: 1;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.error-notification::before {
+  content: "⚠";
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.error-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--vscode-errorForeground);
+  font-size: 20px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.error-close-btn:hover {
+  background: var(--vscode-inputValidation-errorBackground);
+  color: var(--vscode-inputValidation-errorBorder);
+}
+
+.success-notification {
+  background: #047a08;
+  color: #ffffff;
+  border: 1px solid #034506;
+  border-left: 4px solid #034506;
+  border-radius: 3px;
+  padding: 12px;
+  font-size: var(--vscode-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-message {
+  flex: 1;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.success-notification::before {
+  content: "✓";
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.success-close-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.success-close-btn:hover {
+  background: #047a08;
+  color: #a3a3a3;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 8px;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  box-sizing: border-box;
+}
+
+select {
+  background: var(--vscode-dropdown-background);
+  color: var(--vscode-dropdown-foreground);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 2px;
+}
+
+textarea {
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 2px;
+  min-height: 80px;
+  max-height: 150px;
+  resize: vertical;
+}
+
+button {
+  background: var(--vscode-button-background);
+  color: var(--vscode-button-foreground);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background: var(--vscode-button-hoverBackground);
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid var(--vscode-input-border);
+}
+
+label {
+  font-weight: 600;
+  font-size: calc(var(--vscode-font-size) - 1px);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.output {
+  background: var(--vscode-textCodeBlock-background);
+  border: 1px solid var(--vscode-border);
+  border-radius: 2px;
+  padding: 8px;
+  min-height: 80px;
+  max-height: 150px;
+  overflow: auto;
+  font-family: var(--vscode-editor-font-family, monospace);
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: calc(var(--vscode-font-size) - 1px);
+  cursor: pointer;
+}
+
+.output:hover {
+  border-color: var(--vscode-focusBorder);
+}
+
+.output.empty {
+  color: var(--vscode-descriptionForeground);
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.output-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-btn {
+  padding: 8px 12px;
+  font-size: calc(var(--vscode-font-size) - 1px);
+  text-align: center;
+}
+
+.error {
+  color: var(--vscode-errorForeground);
+  background: var(--vscode-inputValidation-errorBackground);
+  padding: 8px;
+  border-radius: 2px;
+  border-left: 2px solid var(--vscode-errorForeground);
+}
+
+.success {
+  color: var(--vscode-editor-foreground);
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.option-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.option-wrapper input[type="text"],
+.option-wrapper input[type="number"],
+.option-wrapper select {
+  width: 100%;
+  padding: 6px;
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 2px;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  box-sizing: border-box;
+}
+
+.option-wrapper input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.option-wrapper textarea {
+  width: 100%;
+  padding: 6px;
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 2px;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.option-wrapper input[type="color"] {
+  width: 100%;
+  height: 40px;
+  padding: 2px;
+  background: var(--vscode-input-background);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.option-wrapper label {
+  font-size: calc(var(--vscode-font-size) - 1px);
+  margin-bottom: 2px;
+}

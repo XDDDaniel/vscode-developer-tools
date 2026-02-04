@@ -1,0 +1,19 @@
+{
+  "all": false,
+  "include": ["out/**/*.js"],
+  "exclude": [
+    "out/test/**",
+    "out/webview/**",
+    "out/extension.js",
+    "out/tools/registerTools.js",
+    "out/types/**"
+  ],
+  "reporter": ["text", "html"],
+  "reports-dir": "coverage",
+  "sourceMap": true,
+  "check-coverage": true,
+  "branches": 80,
+  "functions": 100,
+  "lines": 90,
+  "statements": 90
+}
