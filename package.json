@@ -1,9 +1,9 @@
 {
   "name": "developertools",
-  "displayName": "Developer Tools",
+  "displayName": "Developer Tools for VSC",
   "description": "A comprehensive collection of developer tools including encoding, generators, hash, JSON, regex, and more.",
   "version": "1.0.0",
-  "publisher": "Daniel",
+  "publisher": "XDDDaniel",
   "repository": {
     "url": "https://github.com/XDDDaniel/vscode-developer-tools"
   },
