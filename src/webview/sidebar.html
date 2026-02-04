@@ -21,6 +21,12 @@
       </div>
       <label for="toolSelect">Select Tool</label>
       <select id="toolSelect">
+        <optgroup label="Format">
+          <option value="text:format">Format Converter</option>
+          <option value="format:code">Code Formatter</option>
+          <option value="format:sql">SQL Formatter</option>
+          <option value="format:data">Data Formatter</option>
+        </optgroup>
         <optgroup label="Encoding">
           <option value="base64">Base64</option>
           <option value="base32">Base32</option>
@@ -54,12 +60,6 @@
         </optgroup>
         <optgroup label="Units">
           <option value="units:convert">Unit Converter</option>
-        </optgroup>
-        <optgroup label="Format">
-          <option value="format:code">Code Formatter</option>
-          <option value="format:data">Data Formatter</option>
-          <option value="format:sql">SQL Formatter</option>
-          <option value="text:format">Format Converter</option>
         </optgroup>
         <optgroup label="Advanced">
           <option value="regex:test">Regex Tester</option>

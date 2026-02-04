@@ -14,3 +14,8 @@ Initial release with developer tools:
 - Code/SQL/data formatters
 - Regex tester
 - Certificate analyzer
+
+## 1.0.2 (2026-02-04)
+
+- Reorganized dropdown
+- Adapted icon

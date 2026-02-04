@@ -15,6 +15,8 @@ A VS Code sidebar extension with developer utilities including encoding/decoding
 - **Format** - Code, SQL, and data formatters
 - **Advanced** - Regex tester, certificate analyzer
 
+![preview](./images/preview.png)
+
 ## Requirements
 
 VS Code 1.107.0 or higher
@@ -24,3 +26,8 @@ VS Code 1.107.0 or higher
 ### 1.0.0
 
 Initial release
+
+### 1.0.2
+
+- Reorganized dropdown
+- Adapted icon
